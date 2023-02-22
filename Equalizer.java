@@ -3,30 +3,26 @@ import java.util.Random;
 
 public class Equalizer {
     public static void main(String[] args) {
-        Random r = new Random();
-        String s = String.format("\u001B[45m" );
-        for (int i = 0; i < 5; i++) {
-            int szam = r.nextInt(3,7);
-            if (szam == 3) {
-                kiir(s+"   ");
-            }
-            else if (szam == 4) {
-                kiir(s+"    ");
-            }
-            else if (szam == 5) {
-                kiir(s+"     ");
-            }
-            else if (szam == 6) {
-               kiir(s+"      ");
-            }
-            else if (szam == 7) {
-               kiir(s+"       ");
-            }
-            
-        }
+        Eq5();
     }
 
-    private static void kiir(String str) {
-        System.out.println(str);
+    private static void Eq5() {
+        eq();
+        eq();
+        eq();
+        eq();
+        eq();
     }
+
+    private static void eq() {
+        Random r = new Random();
+        int db=r.nextInt(3,8);
+        String szin = "\u001B[45m";
+        for (int i = 0; i < db; i++) {
+            System.out.println(szin+" ");
+        }
+        System.out.println("");
+    }
+
+    
 }
