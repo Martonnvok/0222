@@ -14,10 +14,16 @@ public class elozoOrai {
 
         negySzamOssz();
         
-       int egy=1, ketto=2, harom=3;
-       String s3 = String.format("%d + %d + %d = %d\n", egy, ketto, harom, Math.pow(egy, ketto) );
-       kiir(s3+"\n");
+       gyok();
 
+    }
+
+    private static void gyok() {
+        int egy=1, ketto=2, harom=3;
+        int ossz = egy+ketto+harom;
+        double gyok= Math.sqrt(ossz);
+        String s3 = String.format("%d + %d + %d = %d", egy, harom, ketto, gyok );
+        kiir(s3+"\n");
     }
 
     private static void negySzamOssz() {
