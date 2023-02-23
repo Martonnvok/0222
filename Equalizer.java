@@ -2,43 +2,46 @@
 import java.util.Random;
 
 public class Equalizer {
+    static Random r = new Random();
     public static void main(String[] args) {
         Eq5();
     }
 
     private static void Eq5() {
-        eq(8);
-        System.out.println(" ");
-        eq(1);
-//        eq();
-//        eq();
-//        eq();
+        eq(8,true);
+        eq(false);
+        eq(12,true);
+        eq();
+        eq(true);
         
         
     }
-
-//    private static void eq() {
-//        Random r = new Random();
-//        int db=r.nextInt(3,8);
-//        
-//        for (int i = 0; i < db; i++) {
-//            String szin = "\u001B[45m";
-//            System.out.println(szin+" ");
-//        }
-//    }
 
    
+
+     private static void eq(){
+        int hossz = r.nextInt(3,8);
+        eq(hossz,false);
+    }
     
-    private static void eq(int hossz) {
-         Random r = new Random();
+    private static void eq(int hossz){
+        eq(hossz,false);
+    }
+    
+    private static void eq(boolean szamol){
+        int hossz = r.nextInt(3,8);
+        eq(hossz,szamol);
+    }
+    
+    private static void eq(int hossz, boolean szamol){
         for (int i = 0; i < hossz; i++) {
-         int szam = r.nextInt (3,8);
-         String szin ="\u001B[45m";
-          for (int j = 0; j < szam; j++) {
-               System.out.print( szin + " ");
+            System.out.print("\u001B[45m" + " ");
         }
-          System.out.println("");
+        if (szamol) {
+            System.out.print("\u001B[40m" + " ");
+            System.out.print(hossz);
+        }
+        System.out.println();
     }
 
-    }
 }
