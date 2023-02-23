@@ -12,6 +12,8 @@ public class Equalizer {
         eq();
         eq();
         eq();
+        
+        
     }
 
     private static void eq() {
@@ -21,11 +23,21 @@ public class Equalizer {
         for (int i = 0; i < db; i++) {
             System.out.println(szin+" ");
         }
-        System.out.println("");
+//        igaze(szin);
+    }
+
+    private static void igaze(String szin) {
+        boolean igaz = true;
+        if (igaz==true) {
+            System.out.print(szin.length());
+        }
     }
     
     private static void eq(int hossz) {
-        
+        for (int i = 0; i < hossz; i++) {
+            System.out.print("\u001B[45m" + " ");
+        }
+        System.out.println();
     }
 
     
