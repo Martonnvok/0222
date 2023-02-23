@@ -8,7 +8,7 @@ public class Equalizer {
 
     private static void Eq5() {
         eq();
-        eq();
+        eq(12);
         eq();
         eq();
         eq();
@@ -22,6 +22,10 @@ public class Equalizer {
             System.out.println(szin+" ");
         }
         System.out.println("");
+    }
+    
+    private static void eq(int hossz) {
+        
     }
 
     
