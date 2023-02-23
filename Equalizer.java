@@ -8,9 +8,9 @@ public class Equalizer {
     }
 
     private static void Eq5() {
-        eq(8,true);
-        eq(false);
-        eq(12,true);
+        eq(200,true);
+        eq(180,false);
+        eq(160,true);
         eq();
         eq(true);
         
